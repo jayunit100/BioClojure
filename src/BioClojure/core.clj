@@ -1,4 +1,4 @@
-(ns SeqMine2.core 
+(ns BioClojure.core 
 	
 	(:import (org.apache.commons.lang StringUtils)  )
 )

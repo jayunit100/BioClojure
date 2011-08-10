@@ -18,21 +18,21 @@ REPL started; server listening on localhost port 28701
 4) Now, load up the core.clj script 
 
 user=> (load-file "src/BioClojure/core.clj")
-#'SeqMine2.core/hasSubstring
+#'BioClojure.core/hasSubstring
 
 5) Yay, it saw the file !  Now, switch to the namespace that has the
 methods in it for the core.clj.  There are really only two methods.
 
-user=> (in-ns 'SeqMine2.core)
-#<Namespace SeqMine2.core>
+user=> (in-ns 'BioClojure.core)
+#<Namespace BioClojure.core>
 
 6) Okay, now try to see if you can capitalize this string.  just 
 call the makeCap method : 
 
-SeqMine2.core=> (makeCap "s1")
+BioClojure.core=> (makeCap "s1")
 "S1"
 
-SeqMine2.core=> 
+BioClojure.core=> 
 
 
 7) Your done !  Now edit the file to support some real operations.
