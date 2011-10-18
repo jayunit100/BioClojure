@@ -2,7 +2,6 @@
   (:use [clojure.pprint])
   (:import (org.apache.commons.lang StringUtils)))
 
-
 (defn transform-entry
   "Transform a meta string into a map of metadata about a DNA entry."
   [entry]
@@ -12,21 +11,24 @@
         props (drop 1 meta-props)]
     (assoc (into {} (map #(vec (.split % "=")) props)) "name" name)))
 
+
 (defn parse-fasta
   "parse a FASTA-formatted string, transforming it into a map with :meta and
   :dna keys."
   [fasta-string]
   (let [text (.trim fasta-string)
         entries (-> text (.replaceAll "\r" "") (.split "\n\n") seq)]
-    (map #(let [[m dna] (.split % "\n")]
+     (map #(let [[m dna] (.split % "\n")]
             {:meta (transform-entry m) :dna dna})
          entries)))
-
+     
+;;Reads a fasta file by parsing the individual sequences
 (defn read-fasta-file
   "Parse a file in fasta format"
   [filename]
   (parse-fasta (slurp filename)))
 
+;;Parses a sequence motif 
 (defn parse-motif
   "Parse a string in motif format"
   [motif-string]
