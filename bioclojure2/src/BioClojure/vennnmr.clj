@@ -6,8 +6,6 @@
 ;; refactor and post data model -- make sure all code uses it
 ;; clarify, post general procedure for merging these data (sequence, shifts, shift-stats)
 ;; clojure-idiomatize code
-
-
 (defn parse-bmrb-stats
   "output: list of maps
      each map: keys are /Res, Name, Atom, Count, Min. Max., Avg., StdDev/"
@@ -17,6 +15,7 @@
         atomlines (rest lines)]
    (for [atomline atomlines]
     (zipmap headings (.split atomline " +")))))
+
 
 (defn transform-stats
   "input: list of maps based on bmrb shift statistics file
@@ -37,6 +36,8 @@
           ;; should refactor to remove 'str' .... requires other changes, too
           (split-lines (.trim string))))
 
+;;
+;;
 (defn parse-shifts
   "output: list of maps
      each map:  keys are /id, shift, error, atom, resid/"
