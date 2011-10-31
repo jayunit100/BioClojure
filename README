@@ -1,14 +1,3 @@
-We've moved ! 
-
-For biojava integration, structural biology and bioinformatics, and data mining utilities, checkout 
-the RudolF project, which now envelopes the source in bioclojure.  HELP WANTED ON RUDOLF from clojure and haskell folks.
-
-https://github.com/jayunit100/RudolF
-
-
-Also, Jan Aerts is working on a somewhat more structured bioclojure repository !  Check it out !
-
-https://github.com/jandot/bioclojure 
-
-
-The code in this project, although operational, is , as of October 31 2011, unmaintained !
+The code in this project, although operational, is , as of October 31 2011, completely unmaintained and unsupported.  
+All usefull source has been migrated to the RudolF project, which is an experimental playground for machine learning.  
+Come say hi, we'd love to have more commiters!
